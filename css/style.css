@@ -1,0 +1,198 @@
+/* глобальные стили */
+*, *::before, *::after{
+    box-sizing: inherit;
+}
+
+html{
+    box-sizing: border-box;
+}
+
+/*
+font-family: 'Caveat', cursive;
+font-family: 'Lora', serif;
+font-family: 'Montserrat', sans-serif;
+*/
+body{
+    color: #fff;
+    background-color: #000;
+    overflow-x: hidden;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+}
+
+a{
+    color: #fff;
+    text-decoration: none;
+
+}
+ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+/* контейнер для контента */
+.container{
+    max-width: 1630px;
+    margin: 0 auto;
+    padding: 0 10px;
+}
+
+.title{
+    font-family: 'Lora', serif;
+    font-size: 56px;
+    text-align: center;
+    line-height: 96px;
+}
+
+
+/* start header */
+
+.header{
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.header-top{
+    height: 200px; /*высота секции лого и меню*/
+    display: flex;
+    /* разнесли лого и меню по разные стороны сайта */
+    justify-content: space-between;
+    /* выровнить текст по центру по горизонтали*/
+    align-items: center;
+}
+.header__logo a{
+    font-family: 'Caveat', cursive;
+    line-height: 66px;
+    font-size: 56px;
+}
+.menu__list{
+    display: flex;
+}
+/* запись делает отступы для всех, кроме последнего */
+.menu__list li:not(:last-child){
+    padding-right: 60px;
+}
+
+.menu__list a{
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 27px;
+    transition: all 0.4s;
+}
+.menu__list a:hover{
+    color: #43cc43; /*зеленый*/
+}
+
+.menu__btn{
+    display: none;
+    width: 60px;
+    height: 60px;
+    align-items: center;
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    right: 0;
+}
+.menu__btn-inner{
+    width: 40px;
+}
+.menu__btn-line{
+    height: 5px;
+    background-color: #fff;
+}
+.menu__btn-line + .menu__btn-line{
+    margin-top: 5px;
+}
+.menu__btn:hover{
+    cursor: pointer;
+}
+
+
+.header__content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+    text-align: center;
+    position: relative; /*поз для иконок*/
+}
+.header__content-title{
+    max-width: 960px;
+    width: 100%;
+    margin-bottom: 240px;
+}
+.header__content-btn{
+    background-color: #fff;
+    color: #000;
+    padding: 46px 150px;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 24px;
+    box-shadow: 10px 4px 30px rgba(0, 0, 0, .5);
+    transition: all 0.4s;
+    margin-bottom: 80px;
+}
+.header__content-btn:hover{
+    cursor: pointer;
+    background-color: #000;
+    color: #fff;
+    border: 1px solid #fff;
+}
+
+
+/*контейнер для иконок*/
+.header__content-icons{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    max-width: 166px;
+    width: 100%;
+        position: absolute;
+        bottom: 180px;    /*закрепим справа в углу*/
+        right: 0px;
+}
+/*икононк еще  не видно, зададим ширину и высоту для иконок, чтобы их было видно*/
+.header__content-icon{
+    width: 25px;
+    height: 30px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+}
+
+
+.header__content-mause{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.mouse{
+    height: 35px;
+    padding: 14px 8px 1px 8px;
+    border: 4px solid #fff;
+    border-radius: 14px;
+    box-sizing: content-box;
+    margin-bottom: 30px;
+    cursor: pointer;
+}
+.scroleer{
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background-color: #fff;
+}
+.arrow{
+
+}
+
+
+
+/* END header */
+
+
+
+
+
+
+

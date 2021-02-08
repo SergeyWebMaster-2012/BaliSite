@@ -1,0 +1,87 @@
+/* для ширины экрана меньше 1820*/
+@media screen and (max-width: 1820px){
+    .header-top{
+        margin-bottom: 40px;
+    }
+    .header__content-title{
+        margin-bottom: 100px;
+    }
+
+}
+@media screen and (max-width: 1230px){
+    .header__content-title{
+        margin-bottom: 50px;
+    }
+    .menu__list li:not(:last-child){
+    padding-right: 40px;
+    }
+    .title{
+        font-size: 36px;
+        text-align: center;
+        line-height: 66px;
+    }
+    .header__content-btn{
+        padding: 26px 56px;
+    }
+}
+
+/* при разрешении меньше 930 будет появляться менюшка */
+@media screen and (max-width: 930px){
+    .menu__btn{
+        display: flex;
+        position: relative;
+    }
+    .menu__list{
+        /*скрыли строчку с верхним меню */
+        display: none;
+        position: absolute;
+        left: 0;
+        top: 200px; /*показали меню*/
+        text-align: center;
+        width: 100%; /*заливаем экран черным цветом*/
+        height: 100%;
+        background-color: #000;
+        z-index: 1;
+    }
+    .menu__list li + li{
+        padding-left: 0;
+    }
+    /*показываем меню большими буквами*/
+    .menu__list a{
+        display: block;
+        padding: 50px 30px;
+        font-size: 52px;
+        font-weight: 700;
+    }
+}
+/* для ширины экрана больше 931px,
+    после возвращения размеров, меню может не восстановиться,
+    для этого принудительно применяем правило important */
+@media (min-width: 931px){
+       .menu__list {
+           display: flex @important;
+           flex-direction: row;
+           flex-wrap: wrap;
+        }
+}
+
+
+@media screen and (max-width: 768px){
+    .title{
+        font-size: 26px;
+        line-height: 40px;
+    }
+    .header__content-btn{
+        padding: 16px 26px;
+    }
+    .menu__list a{
+        font-size: 32px;
+        font-weight: 700;
+    }
+    /*разместили крнпки соц сетей по под кнопкой -btn*/
+    .header__content-icons{
+        position: static;
+        margin-bottom: 30px;
+    }
+
+}
