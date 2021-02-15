@@ -63,6 +63,29 @@
     .about__title::before{
         display: none;
     }
+    .footer__inner{
+        display: block; /*был flex*/
+    }
+    .footer__logo,
+    .footer__menu-list,
+    .footer__info{
+        margin-bottom: 30px;
+    }
+
+    .footer__icons{
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+    .footer__icon+.footer__icon{
+        padding-top: 0px;
+        padding-left: 30px;
+    }
+    .footer__btn{
+        max-width:     400px;
+        margin: 0 auto;
+        padding: 10px;
+    }
 }
 /* при разрешении меньше 930 будет появляться менюшка */
 @media screen and (max-width: 930px){
