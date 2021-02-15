@@ -8,6 +8,32 @@
     }
 
 }
+/*для карточек - перстраивам убирая отступы*/
+@media screen and (max-width: 1400px){
+    .about__item{
+        margin: 0;
+        margin-bottom: 30px;
+    }
+    .tour__form{
+        display: flex;
+        flex-direction: column;
+        align-items: center
+    }
+    .tour__form-input{
+        border-right: 1px solid #fff;
+        text-align: center;
+        margin-bottom: 30px
+    }
+    .tour__form-btn{
+        width: 400px;
+        padding: 26px;
+    }
+    .tour__form-input,
+    .tour__form-btn, {
+        margin: 20px auto;
+    }
+}
+
 @media screen and (max-width: 1230px){
     .header__content-title{
         margin-bottom: 50px;
@@ -25,6 +51,19 @@
     }
 }
 
+/*секция about - смещаем карточки*/
+@media screen and (max-width: 1020px){
+    .about__items{
+        justify-content: space-around;
+    }
+    .about{
+        padding: 50px 0;
+    }
+    .about__title::after,
+    .about__title::before{
+        display: none;
+    }
+}
 /* при разрешении меньше 930 будет появляться менюшка */
 @media screen and (max-width: 930px){
     .menu__btn{
@@ -83,5 +122,32 @@
         position: static;
         margin-bottom: 30px;
     }
+
+    .about{
+        padding: 60px 0 60px;
+    }
+    .about__item-title{
+        font-size: 20px;
+    }
+    .about__item-text{
+        font-size: 12px;
+    }
+    .about__items{            /* перестраиваем блоки в колонку */
+        display: block;
+    }
+    .about__item{
+        width: 100%;
+        margin: 0 0 15px;
+    }
+    /*перестроили контент и слайдер по центру*/
+    .program-slider__item-content {
+        flex-direction: column;
+        text-align: center
+    }
+    .program-slider__item-images{
+            text-align: center;
+            margin: 0 auto;
+    }
+
 
 }
